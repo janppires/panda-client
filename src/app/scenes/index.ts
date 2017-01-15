@@ -1,7 +1,11 @@
-import AppComponent from './app';
+import { AppComponent } from './app';
+import { CampaignsPageComponent } from './campaigns-page';
+import { NotFoundPageComponent } from './not-found-page';
 
 export const COMPONENTS = [
-  AppComponent
+  AppComponent,
+  CampaignsPageComponent,
+  NotFoundPageComponent
 ];
 
 export const AppBootstrap = AppComponent;

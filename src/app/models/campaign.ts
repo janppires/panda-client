@@ -1,6 +1,6 @@
 export interface Campaign {
   id: string;
-  info: {
-    game: string;
-  };
+  // info: {
+  //   game: string;
+  // };
 }

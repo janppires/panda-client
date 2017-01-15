@@ -1,0 +1,9 @@
+<div>
+  campaigns-page works!
+  <div *ngIf="loading$ | async">IS LOADING!!!</div>
+  <ul>
+    <li *ngFor="let item of campaigns$ | async">
+      id: {{item.platform}}, {{item.gameId}}
+    </li>
+  </ul>
+</div>

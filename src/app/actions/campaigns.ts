@@ -32,7 +32,8 @@ export class FetchAction implements Action {
 export class FetchCompleteAction implements Action {
   type = ActionTypes.FETCH_COMPLETE;
 
-  constructor(public payload: Campaign[]) { }
+  constructor(public payload: Campaign[]) {
+  }
 }
 
 /**

@@ -1,6 +1,5 @@
 import '@ngrx/core/add/operator/select';
 import { createSelector } from 'reselect';
-import {Observable} from "rxjs/Observable";
 import {Campaign} from "../models/campaign";
 import * as campaignsActions from "../actions/campaigns";
 
@@ -61,9 +60,8 @@ export function reducer(state = initialState, action: campaignsActions.Actions )
  * use-case.
  */
 
-export function getStatus(state$: Observable<State>) {
-  return state$.select(state => state.loading);
-}
+
+export const getLoadingStatus = (state: State) => state.loading;
 
 export const getEntities = (state: State) => state.entities;
 

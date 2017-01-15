@@ -108,3 +108,12 @@ export const getCampaignsEntities = createSelector(getCampaignsState, fromCampai
 export const getCampaignsIds = createSelector(getCampaignsState, fromCampaigns.getIds);
 export const getSelectedCampaignId = createSelector(getCampaignsState, fromCampaigns.getSelectedId);
 export const getSelectedCampaign = createSelector(getCampaignsState, fromCampaigns.getSelected);
+export const getCampaignsLoadingStatus = createSelector(getCampaignsState, fromCampaigns.getLoadingStatus);
+
+/**
+ * Some selector functions create joins across parts of state. This selector
+ * composes the search result IDs to return an array of books in the store.
+ */
+export const getCampaigns = createSelector(getCampaignsEntities, getCampaignsIds, (campaigns, ids) => {
+  return ids.map(id => campaigns[id]);
+});
